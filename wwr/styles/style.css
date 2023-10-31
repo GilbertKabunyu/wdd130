@@ -33,8 +33,7 @@ body {
 header {
     background-color: rgba(20, 30, 13, .7);
     display: grid;
-    grid-template-columns: 150px auto;
-    
+    grid-template-columns: 150px auto;  
 }
 
 h2 {
@@ -45,6 +44,9 @@ nav a {
     color: azure;
     text-decoration: none;
     padding: 35px;
+}
+
+nav{
     display: flex;
     justify-content: space-around;
 }

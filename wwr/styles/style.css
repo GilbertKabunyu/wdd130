@@ -1,4 +1,4 @@
-content {
+#content {
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -243,7 +243,7 @@ footer .social img {
     #hero-msg h4 {
         display: none;
     }
-    .home-title {
+    #hero-msg h1{
         font-size: 25px;
         color: #6f7364;
     }

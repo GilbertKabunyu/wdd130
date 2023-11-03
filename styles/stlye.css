@@ -1,0 +1,30 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    background-color: #847cf2;
+    display: flex;
+    justify-content: space-around;
+    color: blanchedalmond;
+    height: 100px;
+    align-items: center;
+}
+
+a{
+    color: blanchedalmond;
+    padding: 1em .5em;
+}
+a:hover{
+    background-color: blanchedalmond;
+    color: #847cf2;
+}
+
+h1{
+    color: rgb(34, 1, 1);
+}
+
+p{
+    color: rgb(34, 1, 1);
+    font-size: 1.15em;
+}

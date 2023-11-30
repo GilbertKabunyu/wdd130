@@ -29,124 +29,6 @@
     --nav-hover-background-color: #2dd881;
 }
 
-/***************************************************
-*                                                  *
-*       settings for whole pages                   *
-*                                                  *
-****************************************************/
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-body {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4em;
-    font-size: 18px;
-    text-align: center;
-}
-
-/**************************************************
-*                                                  *
-*       header codes                               *
-*                                                  *
-***************************************************/
-header {
-    padding: 1em;
-    text-align: center;
-    color: var(--headline-color-on-color);
-    background-color: var(--paragraph-background-color);
-    display: grid;
-    grid-template-columns: 200px auto;
-    align-items: center;
-    /* flex-direction: row;
-    align-items: start;
-    justify-content: space-around;*/
-}
-
-header>h1,
-header>h2 {
-    color: var(--headline-color-on-color);
-}
-
-.logo {
-    width: 150px;
-    height: 150px;
-    display: flex;
-}
-
-#logo_link {
-    padding-top: 5px;
-    justify-self: center;
-    align-self: center;
-}
-
-nav {
-    background-color: var(--nav-background-color);
-    line-height: 3em;
-    text-align: center;
-    font-size: 1.2em;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-}
-
-nav a {
-    padding: 1em;
-    min-width: 120px;
-    text-decoration: none;
-    padding: 10px;
-
-}
-
-nav a:link,
-nav a:visited {
-    color: var(--nav-link-color);
-}
-
-nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
-}
-
-
-/******************************************
-*   main section
-*
-*****************************************/
-.home-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1em;
-    padding: 1em 0;
-}
-
-.home_image{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 2,1fr;
-    grid-column: 1/-1;
-    grid-row: 1;
-}
-
-.trading{
-    grid-row: 1/3;
-    grid-column: 5/1;
-    width: 100%;
-}
-
-.home-msg{
-    grid-column: 4;
-    grid-row: auto;
-    
-}
-
-.trade{
-    grid-column: 7;
-
-}
-
 img {
     display: block;
     margin: 0 auto;
@@ -174,25 +56,10 @@ hr {
 
 p {
     font-family: var(--paragraph-font);
-    color: white;
+    /* color: white; */
     padding: 1em;
 }
 
-.colors {
-    width: 100%;
-    min-width: 350px;
-    margin: 30px auto;
-    text-align: center;
-}
-
-.colors th {
-    background-color: #999;
-}
-
-.colors td {
-    width: 20%;
-    height: 3em;
-}
 
 .primary {
     background-color: var(--primary-color);
@@ -220,31 +87,169 @@ p.colored {
 }
 
 
-.sitemap {
-    display: grid;
-    justify-content: center;
-
-    grid-template-columns: repeat(6, 15%);
-    grid-template-rows: 3em 1.5em 1.5em 3em;
-    grid-template-areas: ". . home home . ."
-        ". . . top . ."
-        ". left left right right ."
-        "page2 page2 . . page3 page3";
+/***************************************************
+*                                                  *
+*       settings for whole pages                   *
+*                                                  *
+****************************************************/
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.sitemap>div {
-
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em;
+    font-size: 18px;
     text-align: center;
+    font-family: var(--heading-font);
+}
 
+/**************************************************
+*                                                  *
+*       header codes                               *
+*                                                  *
+***************************************************/
+header {
+    padding: 1em;
+    color: var(--headline-color-on-color);
+    background-color: var(--paragraph-background-color);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 200px auto;
+    box-sizing: border-box;
+
+
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+nav a {
+    padding: 1em;
+    min-width: 120px;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+
+h2 {
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    font-family: var(--paragraph-font);
+    padding: 1em;
+}
+
+/**************************************
+*
+*      Main section codes
+*
+**************************************/
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 2em;
+    background-color: var(--accent3-color);
+    padding: 1em;
+}
+
+.home_image {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column: 1/-1;
+
+}
+
+.home-msg {
+    grid-column: 1/-1;
+}
+
+
+.trading {
+    grid-row: 1/3;
+    grid-column: 5/1;
+    width: 100%;
+}
+
+.trade {
+    width: 80%;
+    grid-column: 1/-2;
+
+}
+
+.text-msg {
+    grid-column: 1/5;
+}
+
+
+.msg {
+    background-color: var(--nav-link-color);
+    line-height: 1em;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #848c8e;
+    grid-column: 3;
+}
+
+.msg p {
+    color: white;
+    margin: 1em;
+}
+
+.msg h3 {
+    color: blue;
+}
+
+.join {
+    border-radius: 10px;
+    background-color: #e9c46a;
+    padding: 15px 30px;
+    margin-top: 50px;
 }
 
 /************************************************
 *                                               *
-*        Education And FAQ codes                *
+*      Education And FAQ codes                  *
 *                                               *
 ************************************************/
 .faq {
-    background: var(--accent3-color);
+    background: var(--color-white);
     margin-top: 40px;
     margin-bottom: 40px;
     border-radius: 25px;
@@ -252,12 +257,14 @@ p.colored {
 }
 
 .education {
-    background: var(--accent3-color);
+    background: var(--color-white);
     margin-top: 40px;
     margin-bottom: 40px;
     border-radius: 25px;
     grid-column: 2/10;
 }
+
+/* Accordion styles */
 
 details {
     border-radius: 10px;
@@ -267,7 +274,7 @@ details {
 }
 
 summary {
-    color: white;
+    color: var(--color-white);
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -320,22 +327,22 @@ details img {
 *                                               *
 *************************************************/
 footer {
-    background-color: #848c8e;
-    color: goldenrod;
+    background-color: #3e3e3e;
+    color: #e9c46a;
     padding: 25px 50px;
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 footer a {
-    color: goldenrod;
+    color: #e9c46a;
     text-decoration: none;
 }
 
 footer a:hover {
-    color: goldenrod;
+    color: #e9c46a;
 }
 
 footer p {
@@ -350,7 +357,7 @@ footer .social img {
     padding-top: 15px;
 }
 
-/*.sm-home {
+.sm-home {
     grid-area: home;
     background-color: #ccc;
     line-height: 3em;
@@ -384,4 +391,74 @@ footer .social img {
     border-top: 1px solid;
     border-right: 1px solid;
 }
-/*
+
+/******************************************************
+*
+*      Component page codes
+*
+********************************************************/
+
+.compet{
+    margin: 1em;
+    font-family: var(--heading-font);
+    background-color: #2dd881;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: rgb(52, 55, 58);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+p {
+    padding: 3px;
+}
+
+.me {
+    width: 300px;
+    height: 300px;
+    padding: 1em;
+}

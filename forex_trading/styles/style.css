@@ -30,8 +30,7 @@
 }
 
 img {
-    display: block;
-    margin: 0 auto;
+    width: 100%;
 }
 
 h1,
@@ -92,17 +91,14 @@ p.colored {
 *       settings for whole pages                   *
 *                                                  *
 ****************************************************/
-.content {
-    max-width: 1200px;
+#content {
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 body {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 4em;
     font-size: 18px;
-    text-align: center;
     font-family: var(--heading-font);
 }
 
@@ -112,7 +108,6 @@ body {
 *                                                  *
 ***************************************************/
 header {
-    padding: 1em;
     color: var(--headline-color-on-color);
     background-color: var(--paragraph-background-color);
     display: grid;
@@ -120,30 +115,24 @@ header {
     grid-template-columns: 200px auto;
     box-sizing: border-box;
 
-
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
-    display: flex;
+  width: 100%;
 }
 
 #logo_link {
-    padding-top: 5px;
     justify-self: center;
     align-self: center;
 }
 
 nav {
     background-color: var(--nav-background-color);
-    line-height: 3em;
-    text-align: center;
-    font-size: 1.2em;
-    list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
+    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+    grid-column: 2;
+    justify-items: center;
+    font-size: 1.5em;
 }
 
 nav a {
@@ -199,6 +188,7 @@ p {
 
 .home-msg {
     grid-column: 1/-1;
+    text-align: center;
 }
 
 
@@ -209,8 +199,8 @@ p {
 }
 
 .trade {
-    width: 80%;
-    grid-column: 1/-2;
+    max-width: 500px;
+    justify-self: center;
 
 }
 
@@ -248,6 +238,13 @@ p {
 *      Education And FAQ codes                  *
 *                                               *
 ************************************************/
+.edu,
+.ask {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: center;
+}
+
 .faq {
     background: var(--color-white);
     margin-top: 40px;
@@ -266,29 +263,51 @@ p {
 
 /* Accordion styles */
 
-details {
+details#edu1 {
     border-radius: 10px;
     overflow: hidden;
     padding: 0 0 1em 0;
     margin: 1rem 0;
 }
 
-summary {
+details#faq2 {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 0 1em 0;
+    margin: 1rem 0;
+}
+
+#edu1 summary {
     color: var(--color-white);
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    background: #2c3e50;
+    background: #a7b0b9;
     font-weight: bold;
     cursor: pointer;
 }
 
-summary:hover {
-    background: #1a252f;
+#faq2 summary {
+    color: var(--color-white);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #498fd4;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-details summary::after {
+#edu1 summary:hover {
+    background: var(--accent2-color);
+}
+
+#faq2 summary:hover {
+    background: var(--headline-color-on-white);
+}
+
+details#edu1 summary::before {
     content: '\276F';
     width: 1em;
     height: 1em;
@@ -296,7 +315,24 @@ details summary::after {
     transition: all 0.35s;
 }
 
-details[open] summary::after {
+details#faq2 summary::after {
+    content: '\276F';
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+}
+
+details#edu1[open] summary::before {
+    content: '\276F';
+    transform: rotate(90deg);
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+}
+
+details#faq2[open] summary::after {
     content: '\276F';
     transform: rotate(90deg);
     width: 1em;
@@ -326,6 +362,7 @@ details img {
 *           footer pages codes                  *
 *                                               *
 *************************************************/
+
 footer {
     background-color: #3e3e3e;
     color: #e9c46a;
@@ -355,6 +392,16 @@ footer p a:hover {
 
 footer .social img {
     padding-top: 15px;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+}
+
+.socials img{
+    margin: 0 5px;
+    width: 64px;
 }
 
 .sm-home {
@@ -398,7 +445,7 @@ footer .social img {
 *
 ********************************************************/
 
-.compet{
+.compet {
     margin: 1em;
     font-family: var(--heading-font);
     background-color: #2dd881;

@@ -7,7 +7,8 @@
     --accent1-color: #fe5f55;
     --accent2-color: #e9c46a;
     --accent3-color: #2dd881;
-
+    --color-white:#fff;
+    
     /* change the values below to your chosen font(s) */
     --heading-font: 'Roboto', sans-serif;
     --paragraph-font: 'Source Code Pro', monospace;
@@ -55,7 +56,6 @@ hr {
 
 p {
     font-family: var(--paragraph-font);
-    /* color: white; */
     padding: 1em;
 }
 

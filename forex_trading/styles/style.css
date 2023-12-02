@@ -245,6 +245,9 @@ p {
     justify-content: center;
     background-color: #2dd881;
 }
+.headline{
+    text-align: center;
+}
 
 .ask2 {
     grid-column: 6/5;

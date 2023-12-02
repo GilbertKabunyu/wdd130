@@ -270,21 +270,21 @@ p {
 
 /* Accordion styles */
 
-details#edu1 {
+details.edu1 {
     border-radius: 10px;
     overflow: hidden;
     padding: 0 0 1em 0;
     margin: 1rem 0;
 }
 
-details#faq2 {
+details.faq2 {
     border-radius: 10px;
     overflow: hidden;
     padding: 0 0 1em 0;
     margin: 1rem 0;
 }
 
-#edu1 summary {
+.edu1 summary {
     color: var(--color-white);
     overflow: hidden;
     display: flex;
@@ -295,7 +295,7 @@ details#faq2 {
     cursor: pointer;
 }
 
-#faq2 summary {
+.faq2 summary {
     color: var(--color-white);
     overflow: hidden;
     display: flex;
@@ -306,15 +306,15 @@ details#faq2 {
     cursor: pointer;
 }
 
-#edu1 summary:hover {
+.edu1 summary:hover {
     background: var(--accent2-color);
 }
 
-#faq2 summary:hover {
+.faq2 summary:hover {
     background: var(--headline-color-on-white);
 }
 
-details#edu1 summary::before {
+details.edu1 summary::before {
     content: '\276F';
     width: 1em;
     height: 1em;
@@ -322,7 +322,7 @@ details#edu1 summary::before {
     transition: all 0.35s;
 }
 
-details#faq2 summary::after {
+details.faq2 summary::after {
     content: '\276F';
     width: 1em;
     height: 1em;
@@ -330,7 +330,7 @@ details#faq2 summary::after {
     transition: all 0.35s;
 }
 
-details#edu1[open] summary::before {
+details.edu1[open] summary::before {
     content: '\276F';
     transform: rotate(90deg);
     width: 1em;
@@ -339,7 +339,7 @@ details#edu1[open] summary::before {
     transition: all 0.35s;
 }
 
-details#faq2[open] summary::after {
+details.faq2[open] summary::after {
     content: '\276F';
     transform: rotate(90deg);
     width: 1em;
@@ -588,7 +588,7 @@ button {
     /* This extra margin represent roughly the same space as the space
        between the labels and their text fields */
     margin-left: 0.5em;
-}
+} 
 
 #feedback {
     background-color: antiquewhite;

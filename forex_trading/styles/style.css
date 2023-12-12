@@ -1,4 +1,11 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
 
 :root {
     /* change the values below to your colors from your palette */
@@ -245,7 +252,8 @@ p {
     justify-content: center;
     background-color: #2dd881;
 }
-.headline{
+
+.headline {
     text-align: center;
 }
 
@@ -591,7 +599,7 @@ button {
     /* This extra margin represent roughly the same space as the space
        between the labels and their text fields */
     margin-left: 0.5em;
-} 
+}
 
 #feedback {
     background-color: antiquewhite;
@@ -606,4 +614,64 @@ button {
 
 .moveDown {
     margin-top: 3em;
+}
+
+/*************************************************
+*
+*       Media Query
+*
+**************************************************/
+
+@media screen and (max-width:900px) {
+
+    header,
+    main,
+    footer {
+        display: flex;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        letter-spacing: unset;
+    }
+
+    #content {
+        max-width: 100%;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-around;
+    }
+
+    nav {
+        display: block;
+    }
+
+    #logo_link {
+        background-color: unset;
+        width: auto;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+
+    footer {
+        margin-top: 25px;
+        padding: 1em;
+        box-sizing: border-box;
+    }
+
+    footer p {
+        padding: 2em;
+    }
+
 }
